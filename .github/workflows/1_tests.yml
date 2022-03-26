@@ -14,12 +14,15 @@ jobs:
       matrix:
         os: [ubuntu-latest]
         python-version: ['3.7', '3.8', '3.9', '3.10']
-        poetry-version: [1.1.4]
+        poetry-version: ['1.1.13']
         include:
           - os: windows-latest
             python-version: '3.7'
+            poetry-version: '1.1.13'
           - os: macos-latest
             python-version: '3.7'
+            poetry-version: '1.1.13'
+
     timeout-minutes: 10
 
     steps:

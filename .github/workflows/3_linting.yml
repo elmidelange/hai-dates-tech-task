@@ -13,8 +13,8 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        python-version: [3.8]
-        poetry-version: [1.1.4]
+        python-version: ['3.9']
+        poetry-version: ['1.1.13']
     env:
       OS: ${{ matrix.os }}
       PYTHON: ${{ matrix.python-version }}
@@ -41,8 +41,7 @@ jobs:
 
     - name: Lint with pylint
       run: |
-        pylint actionscicd
-        pylint tests
+        poetry run pylint dates
 
     - name: Run Black check
       uses: psf/black@stable
