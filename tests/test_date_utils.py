@@ -1,5 +1,5 @@
 import pytest
-from app.date_utils import (
+from dates.dates_utils import (
     check_format,
     count_leap_years,
     get_day_month_year,

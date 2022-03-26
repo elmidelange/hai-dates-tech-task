@@ -42,3 +42,10 @@ jobs:
         python -m poetry run python -m pytest --cache-clear --cov=app test/ > pytest-coverage.txt
     - name: Comment coverage on PR
       uses: coroo/pytest-coverage-commentator@v1.0.2
+
+    - name: Build and publish to pypi
+      uses: JRubics/poetry-publish@v1.10
+      with:
+        pypi_token: ${{ secrets.PYPI_TEST_TOKEN }}
+        repository_name: "testpypi"
+        repository_url: "https://test.pypi.org/legacy/"

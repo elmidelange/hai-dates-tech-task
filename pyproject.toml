@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "hai-dates-tech-task"
+name = "dates"
 version = "0.1.0"
 description = "Harrison.ai dates tech task"
 authors = ["Elmi de Lange"]
