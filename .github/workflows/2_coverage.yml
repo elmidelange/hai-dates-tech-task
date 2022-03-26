@@ -41,7 +41,7 @@ jobs:
 
     - name: Generate coverage report
       run: |
-        python -m poetry run python -m pytest --cache-clear --cov=app tests/ > pytest-coverage.txt
+        python -m poetry run python -m pytest --cache-clear --cov=dates tests/ > pytest-coverage.txt
 
     - name: Comment coverage on PR
       uses: coroo/pytest-coverage-commentator@v1.0.2
