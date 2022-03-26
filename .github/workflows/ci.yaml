@@ -37,6 +37,7 @@ jobs:
     - name: Test with pytest & build coverage file
       run: |
         python -m poetry run python -m pytest --cache-clear --cov=app tests/ > pytest-coverage.txt
+
     - name: Comment coverage on PR
       uses: coroo/pytest-coverage-commentator@v1.0.2
 
@@ -46,3 +47,6 @@ jobs:
         pypi_token: ${{ secrets.PYPI_TEST_TOKEN }}
         repository_name: "testpypi"
         repository_url: "https://test.pypi.org/legacy/"
+        ignore_dev_requirements: "yes"
+        python_version: "${{ matrix.python-version }}"
+        poetry_version: "==${{ matrix.poetry-version }}"
