@@ -60,7 +60,7 @@ def test_get_day_month_year(test_input, expected):
     ],
 )
 def test_count_leap_years(test_year, test_month, test_day, expected):
-    assert count_leap_years(test_year, test_month, test_day) == expected
+    assert count_leap_years(test_year, test_month) == expected
 
 
 @pytest.mark.parametrize(

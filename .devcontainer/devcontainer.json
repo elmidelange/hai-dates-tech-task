@@ -14,6 +14,7 @@
 		"python.formatting.blackPath": "/usr/local/bin/black",
 		"python.linting.enabled": true,
 		"python.linting.pylintEnabled": true,
+        "python.linting.mypyEnabled": true,
 		"editor.insertSpaces": true,
 		"editor.tabSize": 4,
 		"editor.detectIndentation": false,
