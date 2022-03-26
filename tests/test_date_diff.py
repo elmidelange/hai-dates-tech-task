@@ -1,4 +1,4 @@
-from app.dates import date_diff
+from app.date import date_diff
 
 
 def test_no_days_diff():
@@ -14,4 +14,8 @@ def test_different_month():
 
 
 def test_different_year():
+    assert date_diff(date1="2017-12-14", date2="2021-12-01") == 1447
+
+
+def test_reverse_dates():
     assert date_diff(date1="2021-12-01", date2="2017-12-14") == 1447
