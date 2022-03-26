@@ -30,16 +30,13 @@ jobs:
         python -m pip install --upgrade pip
         python -m pip install poetry==${{ matrix.poetry-version }}
 
-    - name: View poetry --help
-      run: poetry --help
-
     - name: Install dependencies
       shell: bash
       run: python -m poetry install
 
     - name: Test with pytest & build coverage file
       run: |
-        python -m poetry run python -m pytest --cache-clear --cov=app test/ > pytest-coverage.txt
+        python -m poetry run python -m pytest --cache-clear --cov=app tests/ > pytest-coverage.txt
     - name: Comment coverage on PR
       uses: coroo/pytest-coverage-commentator@v1.0.2
 
