@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.2.2 (2022-03-27)
+### Fix
+* Removing build.sh and renaming utils file ([`136e028`](https://github.com/elmidelange/hai-dates-tech-task/commit/136e02892d3ed2baad6f6d13c1f328af5bd87fa3))
+
 ## v0.2.1 (2022-03-27)
 ### Fix
 * Moved loguru to dev requirements ([`c725013`](https://github.com/elmidelange/hai-dates-tech-task/commit/c725013ffb9c48839fd346b27d372bbe374ccabd))
