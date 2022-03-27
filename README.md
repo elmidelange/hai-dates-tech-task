@@ -92,6 +92,7 @@ docker run hai-dates --date1 "2012-01-10" --date2 "2012-01-11"
 1. Quality - linting & run rests
 2. Release - peforms [semantic versioning](https://python-semantic-release.readthedocs.io/en/latest/) on the repository by updating the version and applying it both the `pyproject.toml` file and a new Git tag version.
 3. Publish - publishes a new package version to TestPyPI
+- A push to any other branch will just perform the `Quality` CI/CD job
 
 
 ## Room for Improvement
