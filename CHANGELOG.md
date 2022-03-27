@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.2.1 (2022-03-27)
+### Fix
+* Moved loguru to dev requirements ([`c725013`](https://github.com/elmidelange/hai-dates-tech-task/commit/c725013ffb9c48839fd346b27d372bbe374ccabd))
+
 ## v0.2.0 (2022-03-27)
 ### Feature
 * Documentation ([`013ccc3`](https://github.com/elmidelange/hai-dates-tech-task/commit/013ccc3ed3e303fd068dd2b6576042966601c9b9))
