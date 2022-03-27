@@ -2,7 +2,7 @@
 """
 from loguru import logger
 
-from dates.dates_utils import check_format, get_day_month_year, get_total_days
+from dates.utils import check_format, get_day_month_year, get_total_days
 
 
 def date_diff(date1: str, date2: str) -> int:
