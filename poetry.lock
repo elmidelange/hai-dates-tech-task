@@ -89,7 +89,7 @@ colorama = {version = "*", markers = "platform_system == \"Windows\""}
 name = "colorama"
 version = "0.4.4"
 description = "Cross-platform colored terminal text."
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
@@ -261,7 +261,7 @@ python-versions = ">=3.6"
 name = "loguru"
 version = "0.6.0"
 description = "Python logging made (stupidly) simple"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.5"
 
@@ -614,7 +614,7 @@ python-versions = "*"
 name = "win32-setctime"
 version = "1.1.0"
 description = "A small Python utility to set file creation time on Windows"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.5"
 
@@ -632,7 +632,7 @@ python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,>=2.7"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "99999dae8862e6d9e7c6ba9bc0029164088b43767f9729af41257c85f92af92e"
+content-hash = "682ba1fb8221aa96f19ec6e16183ec4f0893b2e6d693b73ffe3ee3787abb3406"
 
 [metadata.files]
 argcomplete = [
