@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.1.4 (2022-03-27)
+### Fix
+* Force pulling latest semantic release from main for Publish CI pipeline ([`ac7f2fc`](https://github.com/elmidelange/hai-dates-tech-task/commit/ac7f2fc91eb858838c1a402723fefe9f5277f341))
+
 ## v0.1.3 (2022-03-27)
 ### Fix
 * Force pulling latest semantic reelase from repo in Publish CI pipeline ([`250c98d`](https://github.com/elmidelange/hai-dates-tech-task/commit/250c98df9a7906a9fd4db1657d3721a29b5fc32e))
