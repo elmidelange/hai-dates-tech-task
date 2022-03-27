@@ -31,17 +31,6 @@ Timezones were not considered and the dates were expected to be of format `YYYY-
 
 
 ## Setup
-If using VSCode:
-
-1. System Dependencies
-    - [Docker][https://docs.docker.com/get-started/]
-    - [VSCode][https://code.visualstudio.com/download]
-    - [Remote-Containers][https://code.visualstudio.com/docs/remote/containers-tutorial]
-2. VSCode Command Palette
-    - `Remote-Containers: Open Folder in Container`
-
-Otherwise:
-
 1. System Dependencies
     - [Python^3.8][https://www.python.org/downloads/]
     - [Poetry](https://python-poetry.org/)
@@ -91,6 +80,9 @@ docker run hai-dates --date1 "2012-01-10" --date2 "2012-01-11"
 2. Release - peforms [semantic versioning](https://python-semantic-release.readthedocs.io/en/latest/) on the repository by updating the version and applying it both the `pyproject.toml` file and a new Git tag version.
 3. Publish - publishes a new package version to TestPyPI
 - A push to any other branch will just perform the `Quality` CI/CD job
+
+### Test PyPI
+python3.8 -m pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ dates
 
 
 ## Room for Improvement
