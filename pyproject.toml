@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "dates"
-version = "0.1.0"
+version = "0.1.3"
 description = "Harrison.ai dates tech task"
 authors = ["Elmi de Lange"]
 
@@ -18,8 +18,18 @@ commitizen = "^2.21.2"
 pre-commit = "^2.17.0"
 pylint = "^2.13.0"
 mypy = "^0.942"
-sphinx-rtd-theme = "^1.0.0"
+flake8 = "^4.0.1"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.semantic_release]
+version_variable = [
+    "dates/__init__.py:__version__",
+    "pyproject.toml:version"
+]
+branch = "main"
+upload_to_pypi = false
+upload_to_release = true
+build_command = "pip install poetry && poetry build"

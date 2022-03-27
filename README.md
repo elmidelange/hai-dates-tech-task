@@ -5,7 +5,6 @@
 * [General Info](#general-information)
 * [Technologies Used](#technologies-used)
 * [Features](#features)
-* [Screenshots](#screenshots)
 * [Setup](#setup)
 * [Usage](#usage)
 * [Project Status](#project-status)
@@ -29,59 +28,81 @@ Timezones were not considered and the dates were expected to be of format `YYYY-
 
 ## Features
 - Python module to calculate date difference (`dates/date_diff.py`) with tests (`dates/tests/`)
-- Dockerfile for reproducibility across dev and 'prod' environments
-- Awesome feature 3
-
-
-## Screenshots
-![Example screenshot](./img/screenshot.png)
-<!-- If you have screenshots you'd like to share, include them here. -->
+- Dockerfile for reproducibility across dev and future 'prod' environments
+- CI/CD pipeline (`.github/workflows/`) for automated testing & PyPI packaging
 
 
 ## Setup
-What are the project requirements/dependencies? Where are they listed? A requirements.txt or a Pipfile.lock file perhaps? Where is it located?
+If using VSCode:
 
-Proceed to describe how to install / setup one's local environment / get started with the project.
+1. System Dependencies
+    - [Docker][https://docs.docker.com/get-started/]
+    - [VSCode][https://code.visualstudio.com/download]
+    - [Remote-Containers][https://code.visualstudio.com/docs/remote/containers-tutorial]
+2. VSCode Command Palette
+    - `Remote-Containers: Open Folder in Container`
+
+Otherwise:
+
+1. System Dependencies
+    - [Python^3.8][https://www.python.org/downloads/]
+    - [Poetry](https://python-poetry.org/)
+2. Install dependencies
+    - `poetry install`
+3. Activate poetry virtual environemnt
+    - `poetry shell`
 
 
 ## Usage
-How does one go about using it?
-Provide various use cases and code examples here.
 
-`write-your-code-here`
+### CLI Usage
 
+```bash
+python main.py --date1 "2012-01-10" --date2 "2012-01-11"
+0
+```
 
-## Project Status
-Project is: _in progress_ / _complete_ / _no longer being worked on_. If you are no longer working on it, provide reasons why.
+```bash
+python main.py --date1 "2021-12-01" --date2 "2017-12-14"
+1447
+```
+
+```bash
+python main.py --date1 "20000-01-01" --date2 "2017-12-14"
+ValueError: Year value must be of format YYYY for input 20000-01-01
+```
+
+```bash
+python main.py --date1 "2022-02-29" --date2 "2017-12-14"
+ValueError: YYYY-02-29 is only valid on a leap year for input 2022-02-29
+```
+
+### Docker Usage
+```bash
+docker build -t hai-dates .
+docker run hai-dates --date1 "2012-01-10" --date2 "2012-01-11"
+0
+```
+
+### Developer Usage
+- Future features can be implemented by developing on a new branch (e.g. `dev`) and using [Commitizen](https://commitizen-tools.github.io/commitizen/) to standardise commit messages.
+- The `pre-commit-config.yaml` will run some basic code quality checks before commiting to GitHub.
+- Tests and coverage can be run with `pytest --cov=dates`
+- A push to the `main` branch will run the GitHub Actions CI/CD pipeline where it will run the following jobs:
+1. Quality - linting & run rests
+2. Release - peforms [semantic versioning](https://python-semantic-release.readthedocs.io/en/latest/) on the repository by updating the version and applying it both the `pyproject.toml` file and a new Git tag version.
+3. Publish - publishes a new package version to TestPyPI
 
 
 ## Room for Improvement
-Include areas you believe need improvement / could be improved. Also add TODOs for future development.
-
-Room for improvement:
-- Improvement to be done 1
-- Improvement to be done 2
-
-To do:
-- Feature to be added 1
-- Feature to be added 2
-
-- Documentation (Sphynx)
-
+- Allow the module to accept different date formats (e.g. 'DD-MM-YYYY')
+- Add code test coverage requirement to CI/CD pipeline
+- Add docker container build & push step in CI/CD pipeline
+- Developer documentation ( e.g. [Sphynx](https://www.sphinx-doc.org/en/master/))
 
 ## Acknowledgements
-Give credit here.
-- This project was inspired by...
-- This project was based on [this tutorial](https://www.example.com).
-- Many thanks to...
+- Thanks Danny for setting this up! And Andy, Leo & Hong for reviewing :)
 
 
 ## Contact
-Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
-
-
-<!-- Optional -->
-<!-- ## License -->
-<!-- This project is open source and available under the [... License](). -->
-
-<!-- You don't have to include all sections - just the one's relevant to your project -->
+Created by [@elmidelange](https://github.com/elmidelange) - feel free to contact me!
