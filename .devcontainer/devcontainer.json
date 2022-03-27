@@ -6,7 +6,7 @@
 	"context": "..",
 	// Update the 'dockerFile' property if you aren't using the standard 'Dockerfile' filename.
 	"dockerFile": "../Dockerfile",
-	"workspaceFolder": "/workspace/hai-dates-tech-task",
+	// "workspaceFolder": "/workspace/hai-dates-tech-task",
 	// Set *default* container specific settings.json values on container create.
 	"settings": {
 		"python.defaultInterpreterPath": "/usr/local/bin/python",
@@ -14,7 +14,7 @@
 		"python.formatting.blackPath": "/usr/local/bin/black",
 		"python.linting.enabled": true,
 		"python.linting.pylintEnabled": true,
-        "python.linting.mypyEnabled": true,
+		"python.linting.mypyEnabled": true,
 		"editor.insertSpaces": true,
 		"editor.tabSize": 4,
 		"editor.detectIndentation": false,

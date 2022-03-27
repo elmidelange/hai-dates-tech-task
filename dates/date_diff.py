@@ -1,5 +1,7 @@
 """Dates module
 """
+from loguru import logger
+
 from dates.dates_utils import check_format, get_day_month_year, get_total_days
 
 
@@ -13,6 +15,7 @@ def date_diff(date1: str, date2: str) -> int:
     Returns:
         int: Number of days difference
     """
+    logger.info(f"Calculating days between {date1} and {date2}")
 
     # Check for valid input format
     check_format(date_str=date1)

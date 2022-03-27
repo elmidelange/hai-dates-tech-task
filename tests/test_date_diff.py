@@ -1,4 +1,4 @@
-from dates.dates import date_diff
+from dates.date_diff import date_diff
 
 
 def test_no_days_diff():
