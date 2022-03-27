@@ -63,6 +63,8 @@ jobs:
           python-version: 3.8
       - name: Checkout code
         uses: actions/checkout@v2
+      - name: Get latest semantic release
+        run: git pull origin master
       - name: Build and publish to pypi
         uses: JRubics/poetry-publish@v1.10
         with:
