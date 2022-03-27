@@ -3,6 +3,8 @@
 
 from typing import Tuple
 
+from loguru import logger
+
 month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
 
@@ -14,35 +16,43 @@ def check_format(date_str: str) -> None:
     """
 
     if not isinstance(date_str, str):
-        raise ValueError(f"Date must be a string for input {date_str}")
+        msg = f"Date must be a string for input {date_str}"
+        logger.error(msg)
+        raise ValueError(msg)
 
     date_parts = date_str.split("-")
 
     if len(date_parts) != 3:
-        raise ValueError(f"Date must be in YYYY-MM-DD format for input {date_str}")
+        msg = f"Date must be in YYYY-MM-DD format for input {date_str}"
+        logger.error(msg)
+        raise ValueError(msg)
 
     if not all(x.isdigit() for x in date_parts):
-        raise ValueError(f"Date must only contain numbers for input {date_str}")
+        msg = f"Date must only contain numbers for input {date_str}"
+        logger.error(msg)
+        raise ValueError(msg)
 
     year, month, day = tuple(int(x) for x in date_parts)
 
     if not 0 <= year <= 9999 or not len(date_parts[0]) == 4:
-        raise ValueError(f"Year value must be of format YYYY for input {date_str}")
+        msg = f"Year value must be of format YYYY for input {date_str}"
+        logger.error(msg)
+        raise ValueError(msg)
 
     if not 1 <= month <= 12 or not len(date_parts[1]) == 2:
-        raise ValueError(
-            f"Month value must be of format MM and be between 1 and 12 for input {date_str}"
-        )
+        msg = f"Month value must be of format MM and be between 1 and 12 for input {date_str}"
+        logger.error(msg)
+        raise ValueError(msg)
 
     if not 0 <= day <= 31 or not len(date_parts[2]) == 2:
-        raise ValueError(
-            f"Day value must be of format DD and be between 1 and 31 for input {date_str}"
-        )
+        msg = f"Day value must be of format DD and be between 1 and 31 for input {date_str}"
+        logger.error(msg)
+        raise ValueError(msg)
 
     if (is_leap_year(year) is False) and (month == 2) and (day == 29):
-        raise ValueError(
-            f"YYYY-02-29 is only valid on a leap year for input {date_str}"
-        )
+        msg = f"YYYY-02-29 is only valid on a leap year for input {date_str}"
+        logger.error(msg)
+        raise ValueError(msg)
 
 
 def is_leap_year(year: int) -> bool:
