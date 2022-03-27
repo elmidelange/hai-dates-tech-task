@@ -54,6 +54,7 @@ jobs:
           semantic-release publish
       - name: Checkout code
         uses: actions/checkout@v2
+        run: git pull origin main
       - name: Build and publish to pypi
         uses: JRubics/poetry-publish@v1.10
         with:
