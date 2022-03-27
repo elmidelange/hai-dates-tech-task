@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "dates"
-version = "0.1.1"
+version = "0.1.2"
 description = "Harrison.ai dates tech task"
 authors = ["Elmi de Lange"]
 

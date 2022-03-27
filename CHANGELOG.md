@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.1.2 (2022-03-27)
+### Fix
+* Seperated Publish into a new job in th CI pipeline ([`a652f93`](https://github.com/elmidelange/hai-dates-tech-task/commit/a652f932269fd4693fb07486a645a0b1e7ec3748))
+
 ## v0.1.1 (2022-03-27)
 ### Fix
 * Pulling code in CI pipeline before publishing ([`12b294d`](https://github.com/elmidelange/hai-dates-tech-task/commit/12b294dd33b2eaf916ef5cab25cb12b309181029))
