@@ -83,7 +83,7 @@ docker run hai-dates --date1 "2012-01-10" --date2 "2012-01-11"
 ```
 
 ### Developer Usage
-- Future features can be implemented by developing on a new branch (e.g. `dev`) and using [Commitizen](https://commitizen-tools.github.io/commitizen/) to standardise commit messages.
+- Future features can be implemented by developing on a new branch (e.g. `dev`) and using the [Commitizen](https://commitizen-tools.github.io/commitizen/) tool to standardise commit messages.
 - The `pre-commit-config.yaml` will run some basic code quality checks before commiting to GitHub.
 - Tests and coverage can be run with `pytest --cov=dates`
 - A push to the `main` branch will run the GitHub Actions CI/CD pipeline where it will run the following jobs:
