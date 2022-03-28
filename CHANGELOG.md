@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.2.3 (2022-03-28)
+### Fix
+* Adding loguru to prod requirements ([`7fe49ed`](https://github.com/elmidelange/hai-dates-tech-task/commit/7fe49edd4906ad9df8d6c432893454391fbc807f))
+
 ## v0.2.2 (2022-03-27)
 ### Fix
 * Removing build.sh and renaming utils file ([`136e028`](https://github.com/elmidelange/hai-dates-tech-task/commit/136e02892d3ed2baad6f6d13c1f328af5bd87fa3))
