@@ -2,6 +2,13 @@
 
 <!--next-version-placeholder-->
 
+## v1.0.0 (2022-03-31)
+### Feature
+* Testing BREAKING CHANGE trigger ([`886d3ab`](https://github.com/elmidelange/hai-dates-tech-task/commit/886d3ab5b7e23f0e4318d0afadaa3557cb2016db))
+
+### Breaking
+*  ([`886d3ab`](https://github.com/elmidelange/hai-dates-tech-task/commit/886d3ab5b7e23f0e4318d0afadaa3557cb2016db))
+
 ## v0.2.6 (2022-03-31)
 ### Fix
 * Testing fix release ([`cf98306`](https://github.com/elmidelange/hai-dates-tech-task/commit/cf98306e50323c148940ebacf32fa2705cbf650e))

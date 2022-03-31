@@ -77,7 +77,7 @@ docker run hai-dates --date1 "2012-01-10" --date2 "2012-01-11"
 - The `pre-commit-config.yaml` will run some basic code quality checks before commiting to GitHub, including
     - `black` - code formatting according to PEP8
     - `mypy` - static type checking
-    - `pylint` - check code quality for programming errors and refactoring suggestions according to PEP8
+    - `pylint` - check code quality (e.g. programming errors or refactoring suggestions according to PEP8)
 - A push to the `main` branch will run the GitHub Actions CI/CD pipeline where it will run the following jobs:
 1. Quality - linting & run rests
 2. Release - peforms [semantic versioning](https://python-semantic-release.readthedocs.io/en/latest/) on the repository by updating the version and applying it both the `pyproject.toml` file and a new Git tag version.
