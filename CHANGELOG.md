@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.2.4 (2022-03-31)
+### Fix
+* Testing CD workflow for publishing on new tag ([`da6cc9c`](https://github.com/elmidelange/hai-dates-tech-task/commit/da6cc9cfe599f8d7f1e4772b89150d821fe4c874))
+
 ## v0.2.3 (2022-03-28)
 ### Fix
 * Adding loguru to prod requirements ([`7fe49ed`](https://github.com/elmidelange/hai-dates-tech-task/commit/7fe49edd4906ad9df8d6c432893454391fbc807f))
