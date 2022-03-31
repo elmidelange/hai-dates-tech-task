@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.2.6 (2022-03-31)
+### Fix
+* Testing fix release ([`cf98306`](https://github.com/elmidelange/hai-dates-tech-task/commit/cf98306e50323c148940ebacf32fa2705cbf650e))
+
 ## v0.2.5 (2022-03-31)
 ### Fix
 * Testing CD trigger ([`32e7fb8`](https://github.com/elmidelange/hai-dates-tech-task/commit/32e7fb816c0d9b82a4b5f152f5862bb65bb06516))
