@@ -1,0 +1,25 @@
+name: CD
+on:
+  push:
+    tags:
+       - '*'
+
+jobs:
+  Publish:
+    # if: github.event_name == 'push' && github.ref == 'refs/heads/main' && !contains(github.event.head_commit.message, 'chore(release):')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Get latest semantic release
+        run: git pull origin main
+      - name: Build and publish to pypi
+        uses: JRubics/poetry-publish@v1.10
+        with:
+          pypi_token: ${{ secrets.PYPI_TEST_TOKEN }}
+          repository_name: "testpypi"
+          repository_url: "https://test.pypi.org/legacy/"
+          ignore_dev_requirements: "yes"
