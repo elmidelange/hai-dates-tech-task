@@ -73,8 +73,11 @@ docker run hai-dates --date1 "2012-01-10" --date2 "2012-01-11"
 
 ### Developer Usage
 - Future features can be implemented by developing on a new branch (e.g. `dev`) and using the [Commitizen](https://commitizen-tools.github.io/commitizen/) tool to standardise commit messages.
-- The `pre-commit-config.yaml` will run some basic code quality checks before commiting to GitHub.
 - Tests and coverage can be run with `pytest --cov=dates`
+- The `pre-commit-config.yaml` will run some basic code quality checks before commiting to GitHub, including
+    - `black` - code formatting according to PEP8
+    - `mypy` - static type checking
+    - `pylint` - check code quality for programming errors and refactoring suggestions according to PEP8
 - A push to the `main` branch will run the GitHub Actions CI/CD pipeline where it will run the following jobs:
 1. Quality - linting & run rests
 2. Release - peforms [semantic versioning](https://python-semantic-release.readthedocs.io/en/latest/) on the repository by updating the version and applying it both the `pyproject.toml` file and a new Git tag version.

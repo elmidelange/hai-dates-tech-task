@@ -133,3 +133,4 @@ dmypy.json
 
 # Vscode
 .vscode/
+.pylintrc
