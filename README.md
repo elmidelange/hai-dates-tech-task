@@ -82,8 +82,10 @@ docker run hai-dates --date1 "2012-01-10" --date2 "2012-01-11"
 - A push to main that doesn't contain `fix`, `feat` or `BREAKING CHANGE` in the commit message will only run the `Quality` job in the CI/CD pipeline. If these key words are present it will create a new release version (major=`BREAKING CHANGE`, minor=`feat`, patch=`fix`) and publish it to PyPI.
 
 ### Test PyPI
-``bash
+```bash
 python3.8 -m pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple/ dates
+
+python3.8 -c 'from dates.date_diff import date_diff; num_days=date_diff(date1="2021-12-01", date2="2017-12-14"); print(num_days)'
 ```
 
 
