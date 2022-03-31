@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v0.2.5 (2022-03-31)
+### Fix
+* Testing CD trigger ([`32e7fb8`](https://github.com/elmidelange/hai-dates-tech-task/commit/32e7fb816c0d9b82a4b5f152f5862bb65bb06516))
+
 ## v0.2.4 (2022-03-31)
 ### Fix
 * Testing CD workflow for publishing on new tag ([`da6cc9c`](https://github.com/elmidelange/hai-dates-tech-task/commit/da6cc9cfe599f8d7f1e4772b89150d821fe4c874))
